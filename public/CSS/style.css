@@ -1,0 +1,243 @@
+/*  	Paul DINH GIA  
+		01/01/2020			
+		Polaroid website 	*/
+
+@font-face {
+	font-family:Millano;
+	src: url("Font/Millano.ttf");
+}
+
+/* Keyframes animation */
+
+@keyframes start2{
+	0%   {color:transparent;opacity:0}
+	100% {opacity:1;}
+}
+@-webkit-keyframes start2{
+	0%   {color:transparent;opacity:0}
+	100% {opacity:1;}
+}
+@-moz-keyframes start2{
+	0%   {color:transparent;opacity:0}
+	100% {opacity:1;}
+}
+
+
+
+@keyframes start4{
+	0%   {transform:translateY(-90px) rotate(0deg);color:transparent;opacity:0}
+	100% {transform:translateY(0) rotate(-9deg);opacity:0.7}
+}
+@-webkit-keyframes start4{
+	0%   {-webkit-transform:translateY(-90px) rotate(0deg);color:transparent;opacity:0}
+	100% {-webkit-transform:translateY(0) rotate(-9deg);opacity:0.7}
+}
+@-moz-keyframes start4{
+	0%   {-moz-transform:translateY(-90px) rotate(0deg);color:transparent;opacity:0}
+	100% {-moz-transform:translateY(0) rotate(-9deg);opacity:0.7}
+}
+
+
+
+@keyframes start5{
+	0%   {transform:translateY(90px) rotate(-10deg);color:transparent;opacity:0}
+	100% {transform:translateY(0) rotate(1deg);opacity:0.7}
+}
+@-webkit-keyframes start5{
+	0%   {-webkit-transform:translateY(90px) rotate(-10deg);color:transparent;opacity:0}
+	100% {-webkit-transform:translateY(0) rotate(1deg);opacity:0.7}
+}
+@-moz-keyframes start5{
+	0%   {-moz-transform:translateY(90px) rotate(-10deg);color:transparent;opacity:0}
+	100% {-moz-transform:translateY(0) rotate(1deg);opacity:0.7}
+}
+
+
+
+@keyframes start6{
+	0%   {transform:translateX(90px) rotate(-20deg);color:transparent;opacity:0}
+	100% {transform:translateX(0) rotate(-6deg);opacity:0.7}
+}
+@-webkit-keyframes start6{
+	0%   {-webkit-transform:translateX(90px) rotate(-20deg);color:transparent;opacity:0}
+	100% {-webkit-transform:translateX(0) rotate(-6deg);opacity:0.7}
+}
+@-moz-keyframes start6{
+	0%   {-moz-transform:translateX(90px) rotate(-20deg);color:transparent;opacity:0}
+	100% {-moz-transform:translateX(0) rotate(-6deg);opacity:0.7}
+}
+
+/* * * * * * * * * * * * */
+
+
+html {
+	height:98%;
+}
+
+body {
+  background: #000;
+  height:100%;
+  overflow : hidden;
+}
+
+.logo{
+	position: fixed;
+    bottom: 3%;
+    left: 1%;
+    font-size: 1.8em;
+    color: #ffffff26;
+    font-family: Millano;
+    z-index:10;
+    animation: start2 5s;
+    -webkit-animation: start2 5s;
+    -moz-animation: start2 5s;
+}
+
+#view {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Photo{
+	height: 80%;
+    align-items: center;
+    display: flex;
+    z-index: 99;
+    justify-content: center;
+    position: relative;
+}
+
+#polaroid{
+	width: 60%;
+    opacity: 48%;
+}
+
+#myaudio{
+	position:relative;
+	z-index: 100;
+}
+
+.playbutton{
+	position: fixed;
+    z-index: 100;
+    padding : 7px;
+}
+
+
+#play_button{
+	width: 41px;
+    filter:opacity(0.5);
+    transition: filter 0.6s, transform 0.5s;
+}
+
+#play_button:hover{
+	filter:opacity(1);
+	transform : scale(1.1);
+}
+
+.container_polaroids{
+	display: flex;
+    justify-content: center;
+    padding-top: 1.75%;
+}
+
+.polaroid_pic{
+	position:relative;
+	justify-content: center;
+    display: flex;
+}
+
+.polaroid_common{
+	width: 480px;
+	opacity:0.7;
+	position:relative;
+}
+
+
+#polaroid_adrien{
+	right: 126px;
+    transform: rotate(-6deg);
+	z-index: 21;
+   	transition: transform 1s, opacity 1s, z-index 0.5s;
+	animation: start6 3s;
+    -webkit-animation: start6 3s;
+    -moz-animation: start6 3s;
+}
+#polaroid_adrien:hover{
+	transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	opacity:1;
+	z-index: 22;
+
+}
+#polaroid_alexia{
+	top: 16%;
+    transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+   	z-index: 20;
+   	transition: transform 1s, opacity 1s, z-index 0.5s;
+   	-webkit-transition: -webkit-transform 1s, opacity 1s, z-index 0.5s;
+   	-moz-transition: -moz-transform 1s, opacity 1s, z-index 0.5s;
+	animation: start5 3s;
+    -webkit-animation: start5 3s;
+    -moz-animation: start5 3s;
+}
+#polaroid_alexia:hover{
+	transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	opacity:1;
+	z-index: 22;
+}
+#polaroid_pol{
+	transform: rotate(-9deg);
+	-webkit-transform: rotate(-9deg);
+	-moz-transform: rotate(-9deg);
+	z-index: 19;
+    left: 127px;
+   	transition: transform 1s, opacity 1s, z-index 0.5s;
+   	-webkit-transition: -webkit-transform 1s, opacity 1s, z-index 0.5s;
+   	-moz-transition: -moz-transform 1s, opacity 1s, z-index 0.5s;
+	animation: start4 3s;
+    -webkit-animation: start4 3s;
+    -moz-animation: start4 3s;
+}
+#polaroid_pol:hover{
+	transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	opacity:1;
+	z-index: 22;
+}
+
+
+@media(max-width:1024px){
+	body{
+		overflow:auto;
+	}
+	.container_polaroids{
+		display:block;
+	}
+
+	.polaroid_common{
+		width:400px;
+	}
+	#polaroid_pol{
+		left:0px;
+	}
+	#polaroid_adrien{
+		right:0px;
+	}
+	#polaroid_alexia{
+		top:0px;
+	}
+}
+
+@media(max-width:410px){
+	.polaroid_common{
+		width:310px;
+
+}
